@@ -11,7 +11,11 @@
       "limit": 1000 // optional, limit number of results
       "sort": {
         "@timestamp": "desc" // optional, sort order as `"field":"asc|desc"`
-       }
+      },
+      "range": { // optional, limit query range, default to from last execution to now
+        "gte": "7d", // ex. static ISO8601 date or `d` days, `h` hours, `m` minutes from `lte` time.
+        "lte": "now" // ex. statis ISO8601 date or `now`, `today`, `yeasturday`, default to execution time.
+      }
     }
   ],
   "schedule": "H H * * *", // required, cron style
