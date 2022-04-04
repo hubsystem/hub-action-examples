@@ -10,5 +10,6 @@ Which open up to multiple possibilities in tools, programming languages and envi
 - Container will get `/in` mounted where result from metric query will be.
 - Container will get `/out` mounted where output can be places, all `*.jsonl` files that exists in `/out` will be processed by HUB after execution.
 - Output logs will be capture and stored with HUB Action execution, time to live for logs is based on HUB instance setup.
+- Package `Dockerfile`, `hub-action.json` and additional files needed by container build procces in a zip file, send/deploy to HUB.
 
 
