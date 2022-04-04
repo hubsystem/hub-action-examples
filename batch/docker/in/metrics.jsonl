@@ -1,0 +1,1 @@
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efc", "@timestamp": "2022-01-07T09:37:02+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 2.1, "tags": [ "test" ] }

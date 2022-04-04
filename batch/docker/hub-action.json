@@ -1,0 +1,13 @@
+{
+  "name": "Simple value multiplier in Ruby Container",
+  "version": "1.0.0",
+  "description": "Double the metric value and create a new metric suffixed with `_doubled`",
+  "queries": [
+    {
+      "file": "metrics.jsonl",
+      "query": "metric:test_metric AND @timesamp:>2022-01-01"
+    }
+  ],
+  "schedule": "H H * * *"
+}
+
