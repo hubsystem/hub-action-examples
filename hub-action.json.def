@@ -1,0 +1,29 @@
+{
+  "id": "se.hubsystem.super-action", // optional, action package name.
+  "name": "Name of action", // required
+  "version": "1.0.0", // required, should follow semantic versioning.
+  "description": "Describe short what action do", // optional
+  "author": "HUB Support <support@hubsystem.com>", // optional, author/contact name and email.
+  "queries": [ // optional, queries to fetch input data.
+    {
+      "stream": false, // if "query" should be streamed with MQTT to HUB Action (Note: only works if HUB Action is "stream" based).
+      "file": "metrics.jsonl", // required (unless stream=true is set), file name to output query result to.
+      "query": "metric:some-metric AND value:<0", // required, Lucene like query.
+      "limit": 1000 // optional, limit number of results.
+      "sort": { // (Note: has no effect on if "stream=true" is set).
+        "@timestamp": "desc" // optional, sort order as `"field":"asc|desc"`.
+      },
+      "range": { // optional, limit query range, default is from last execution to now (Note: has no effect on if "stream=true" is set).
+        "gte": "7d", // ex. static ISO8601 date or `d` days, `h` hours, `m` minutes from `lte` time.
+        "lte": "now" // ex. static ISO8601 date or `now`, `today`, `yesterday`, default is execution time.
+      }
+    }
+  ],
+  "stream": false, // if action is a "stream" based, default is "batch" based.
+  "schedule": "H H * * *", // required, cron style, (Note: has no effect if "stream=true" is set)
+  "timeout": 20, // optional, HUB will stop action if run longer then X minutes.
+  "memory": 256, // optional, Max memory action need in MB, default is 128MB.
+  "cpu": 2, // optional, CPU action need, default is 2.
+  "disk": 5 // optional, Max disk space in GB action need, default is 5GB.
+}
+
