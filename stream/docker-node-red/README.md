@@ -3,6 +3,10 @@ HUB Stream Action as Node-RED container
 
 Full example of Node-RED container doing stream processing with HUB Action Stream MQTT.
 
+<p align="center">
+![Node-RED Flow](/hub-action-stream-flow.png?raw=true "HUB Action Stream Flow")
+</p>
+
 ## Run
 
 ```sh
