@@ -1,0 +1,6 @@
+node_modules
+lib
+.npm
+.config.*
+settings.js
+.*.backup

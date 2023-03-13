@@ -1,0 +1,131 @@
+[
+    {
+        "id": "63171a50c2e67a27",
+        "type": "tab",
+        "label": "HUB Stream Action Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0d66540d5880aaf8",
+        "type": "mqtt-broker",
+        "name": "HUB MQTT",
+        "broker": "mqtt.hub",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "48bc77cf3fd53594",
+        "type": "mqtt in",
+        "z": "63171a50c2e67a27",
+        "name": "HUB IN",
+        "topic": "test",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "0d66540d5880aaf8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "eb251628f3da9a72",
+                "f855ce620aeb45c6"
+            ]
+        ]
+    },
+    {
+        "id": "cac066652a617b28",
+        "type": "mqtt out",
+        "z": "63171a50c2e67a27",
+        "name": "HUB OUT",
+        "topic": "test_out",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0d66540d5880aaf8",
+        "x": 620,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "eb251628f3da9a72",
+        "type": "function",
+        "z": "63171a50c2e67a27",
+        "name": "Metric value multiplier",
+        "func": "let metric = msg.payload;\n\n// create a new metric name with \"_doubled\" as a suffix\nmetric[\"metric\"] = `${metric[\"metric\"]}_doubled`;\n\n// multiply metric value by 2\nmetric[\"value\"] = metric[\"value\"] * 2;\n\n// update msg payload with new metric\nmsg.payload = metric;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "cac066652a617b28",
+                "4cd71abc310a88af"
+            ]
+        ]
+    },
+    {
+        "id": "f855ce620aeb45c6",
+        "type": "debug",
+        "z": "63171a50c2e67a27",
+        "name": "Print - metric in",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 270,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4cd71abc310a88af",
+        "type": "debug",
+        "z": "63171a50c2e67a27",
+        "name": "Print - metric out",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 300,
+        "wires": []
+    }
+]

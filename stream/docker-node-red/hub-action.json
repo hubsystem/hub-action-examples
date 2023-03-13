@@ -1,0 +1,13 @@
+{
+  "name": "Simple value multiplier in Node-RED Container",
+  "version": "1.0.0",
+  "description": "Double the metric value and create a new metric suffixed with `_doubled`",
+  "queries": [
+    {
+      "stream": true,
+      "query": "metric:test_metric"
+    }
+  ],
+  "stream": true
+}
+

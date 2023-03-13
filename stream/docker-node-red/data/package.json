@@ -1,0 +1,6 @@
+{
+    "name": "hub-action-node-red-project",
+    "description": "A HUB Action Node-RED Project",
+    "version": "0.0.1",
+    "private": true
+}
