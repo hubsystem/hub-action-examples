@@ -1,0 +1,10 @@
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efa", "@timestamp": "2023-09-18T09:37:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 2.1, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efb", "@timestamp": "2023-09-18T09:38:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 2.2, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efc", "@timestamp": "2023-09-18T09:39:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 1.9, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efd", "@timestamp": "2023-09-18T09:40:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 1.7, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efe", "@timestamp": "2023-09-18T09:41:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 2.0, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757eff", "@timestamp": "2023-09-18T09:42:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 1.9, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efg", "@timestamp": "2023-09-18T09:43:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 2.5, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efh", "@timestamp": "2023-09-18T09:44:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 2.6, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efj", "@timestamp": "2023-09-18T09:45:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 2.7, "tags": [ "test" ] }
+{ "id": "04ff45e1cd564bf2e1faab2cbc39c9cbe0757efi", "@timestamp": "2023-09-18T09:46:00+00:00", "metric": "test_metric", "meta": { "foo": "bar" }, "value": 3.0, "tags": [ "test" ] }

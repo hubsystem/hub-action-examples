@@ -1,0 +1,17 @@
+{
+  "name": "HUB Action Dash App",
+  "version": "1.0.0",
+  "description": "Simple example of Dash data app as a HUB Action App",
+  "queries": [
+    {
+      "file": "metrics.jsonl",
+      "query": "metric:test_metric",
+      "range": {
+        "gte": "5d",
+        "lte": "now"
+      }
+    }
+  ],
+  "schedule": "H H * * *",
+  "port": 8050
+}

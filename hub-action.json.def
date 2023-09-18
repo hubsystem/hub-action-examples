@@ -21,9 +21,9 @@
   ],
   "stream": false, // if action is a "stream" based, default is "batch" based.
   "schedule": "H H * * *", // required, cron style, (Note: has no effect if "stream=true" is set)
+  "port": 9000, // optional, if action exposes a web interface
   "timeout": 20, // optional, HUB will stop action if run longer then X minutes.
   "memory": 256, // optional, Max memory action need in MB, default is 128MB.
   "cpu": 2, // optional, CPU action need, default is 2.
   "disk": 5 // optional, Max disk space in GB action need, default is 5GB.
 }
-
